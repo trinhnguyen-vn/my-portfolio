@@ -1,8 +1,14 @@
-@import url("https://fonts.googleapis.com/css2?family=Sofia:ital,wght@0,400;0,900;1,700&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Madimi+One&display=swap"); */
+/* @import url("https://fonts.googleapis.com/css2?family=Madimi+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"); */
+
+@import url('https://fonts.googleapis.com/css2?family=Madimi+One&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet');
 
 /* Variables */
 :root {
-  --font-family: "Sofia", sans-serf;
+  --font-family: "Source Code Pro", sans-serf;
+  font-weight: 400;
+  font-style: normal;
+
   --normal-font: 400;
   --bold-font: 700;
   --bolder-font: 900;
@@ -18,6 +24,7 @@
   --line-height: 1.7rem;
   --transition: 0.3s;
 }
+
 /* Variables end */
 
 html {
@@ -84,6 +91,7 @@ nav a {
   color: var(--white-color);
   transition: var(--transition);
 }
+
 nav a:hover {
   color: var(--secondary-color);
   border-bottom: 2px solid var(--secondary-color);
@@ -106,9 +114,13 @@ nav ul li {
   cursor: pointer;
   display: none;
 }
+
 /* Navbar ends */
 
-.hero, .skills, .projects, .contact {
+.hero,
+.skills,
+.projects,
+.contact {
   scroll-margin-top: 5rem;
 }
 
@@ -126,8 +138,8 @@ nav ul li {
 }
 
 .hero img {
-  height: 15rem;
-  width: 15rem;
+  height: 10rem;
+  width: 10rem;
   border-radius: 50%;
 }
 
@@ -145,6 +157,7 @@ nav ul li {
   line-height: var(--line-height);
   padding: 0.3rem 0;
 }
+
 /* Hero section ends */
 
 /* More about */
@@ -157,6 +170,7 @@ nav ul li {
 .more-about p {
   line-height: var(--line-height);
 }
+
 /* More about ends */
 
 /* Skills section */
@@ -175,10 +189,11 @@ nav ul li {
   padding: 1.25rem;
 }
 
-.icon {
-  width: 11.875rem;
-  height: 11.25rem;
+.skill-image {
+  width: 10rem;
+  height: 11rem;
 }
+
 /* Skills section ends */
 
 /* Projects section */
@@ -218,6 +233,8 @@ nav ul li {
 
 .project-details {
   margin-bottom: var(--bottom-margin);
+  font-size: 0.75rem;
+  text-justify: inter-word;
 }
 
 /* Projects section ends */
@@ -286,6 +303,7 @@ nav ul li {
   border: 2px solid var(--primary-color);
   cursor: pointer;
 }
+
 /* Contacts section ends */
 
 /* Social buttons */
@@ -301,14 +319,15 @@ nav ul li {
   width: 2rem;
   height: 2rem;
 }
+
 /* Social button ends */
 
 /* Scroll to top button */
-.scroll-up  {
+.scroll-up {
   cursor: pointer;
 }
 
-.icon-scroll{
+.icon-scroll {
   cursor: pointer;
   position: fixed;
   right: 0.5%;
@@ -320,6 +339,7 @@ nav ul li {
   height: 3rem;
   border-radius: 50%;
 }
+
 /* Scroll to top button ends */
 
 /* Footer section */
@@ -330,6 +350,7 @@ footer {
   margin: 1.5rem 0 0;
   color: var(--white-color)
 }
+
 /* Footer section ends */
 
 /* General (utilities) */
@@ -346,16 +367,16 @@ footer {
   box-shadow: 0 3px 10px var(--primary-shadow);
   padding: 20px;
   margin: 10px;
-  background-color: #e7efea;
-
+  background-color: #faf1f9;
 }
 
 .project-link-btn {
-font-size: 25px;
-color: var(--secondary-color);
-padding: 5px 10px;
-border-radius: 10px;
+  font-size: 25px;
+  color: var(--secondary-color);
+  padding: 5px 10px;
+  border-radius: 10px;
 }
+
 .project-link-btn:hover {
   font-size: 30px;
 }
@@ -365,6 +386,7 @@ border-radius: 10px;
   nav {
     padding: 1.5rem 1rem;
   }
+
   nav ul {
     position: fixed;
     background-color: var(--bg-color);
@@ -452,4 +474,36 @@ border-radius: 10px;
   .contact-form-container {
     max-width: 17.75rem;
   }
+}
+
+.skills-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  justify-content: center;
+}
+
+.skill-item-container {
+  position: relative;
+  height: 10rem;
+  width: 12rem;
+}
+
+.skill-item-container:hover .skill-image {
+  opacity: 0.3;
+}
+
+.skill-item-container:hover .hover-text {
+  opacity: 1;
+}
+
+.hover-text {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
 }
